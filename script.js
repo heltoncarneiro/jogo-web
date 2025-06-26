@@ -31,20 +31,25 @@ let palavrasBanco = [
     const dicaInput = document.getElementById("dica").value.trim();
     
     if (!palavraInput) {
-      alert("Por favor, digite uma palavra!");
-      return;
+        alert("Por favor, digite uma palavra!");
+        return;
+    }
+    
+    if (!/^[A-Za-z]+$/.test(palavraInput)) {
+        alert("Por favor, use apenas letras de A-Z (sem acentos, números ou caracteres especiais)");
+        return;
     }
     
     if (!dicaInput) {
-      alert("Por favor, digite uma dica!");
-      return;
+        alert("Por favor, digite uma dica!");
+        return;
     }
     
     palavraSecreta = palavraInput.toUpperCase();
     dicaAtual = dicaInput;
     document.getElementById("entrada-palavra").classList.add("escondido");
     iniciarTelaJogo();
-  }
+}
   
   function iniciarTelaJogo() {
     vidas = 5;

@@ -149,4 +149,15 @@ body {
       font-size: 1.5rem;
       letter-spacing: 5px;
     }
+
+    input:invalid {
+      border: 2px solid #e74c3c;
+      animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-5px); }
+      40%, 80% { transform: translateX(5px); }
+  }
   }
