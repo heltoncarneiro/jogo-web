@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogo das Pétalas</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="menu">
+    <h1>JOGO DAS PÉTALAS<br><span>Um jogo de adivinhação</span></h1>
+    <h2>QUANTIDADE DE JOGADORES</h2>
+    <button onclick="iniciarJogo(1)">UM JOGADOR</button>
+    <button onclick="iniciarJogo(2)">DOIS JOGADORES</button>
+  </div>
+
+  <div id="entrada-palavra" class="escondido">
+    <h2>Jogador 1: Digite a palavra e a dica</h2>
+    <input type="text" id="palavra" placeholder="Palavra secreta" maxlength="20" />
+    <input type="text" id="dica" placeholder="Dica para a palavra" maxlength="50" />
+    <button onclick="comecarJogoComPalavra()">Iniciar Jogo</button>
+  </div>
+
+  <div id="jogo" class="escondido">
+    <h2>JOGO DAS PÉTALAS</h2>
+    <p id="vidas">Pétalas restantes: 5</p>
+    <p id="dica-jogo"></p>
+    <img id="flor" src="5.png" alt="Flor com pétalas" />
+    <div id="palavra-secreta"></div>
+    <div id="teclado"></div>
+    <button onclick="reiniciar()">Jogar Novamente</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
